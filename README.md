@@ -1,8 +1,30 @@
-# React + Vite
+# ReactJS-AdminDashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An admin dashboard layout in React and Tailwind — the shell you'd drop real data into: a sidebar, a header, and a main content area.
 
-Currently, two official plugins are available:
+## Layout
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+| Component | Role |
+|---|---|
+| `src/components/header/` | Top bar — search, notifications, account menu |
+| `src/components/sidebar/` | Navigation rail with the dashboard sections |
+| `src/components/main/` | Content area holding the cards, charts and tables |
+
+Composed in `src/App.jsx`.
+
+## Stack
+
+React 18 · Vite · Tailwind CSS
+
+## Running
+
+```bash
+npm install
+npm run dev
+```
+
+Serves on `http://localhost:5173`; `npm run build` writes the production bundle.
+
+## Notes
+
+UI-focused practice build — the panels render static content, so wiring a data source means replacing the placeholder values inside the components. The responsive behaviour is driven entirely by Tailwind's breakpoint classes, with no component library.
